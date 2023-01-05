@@ -276,10 +276,6 @@ contract ReslabEtsit {
     }
     
 
-    //devuelve la longitud del array de los puestos de un laboratorio 
-    function puestosLaboratorioLength(uint _laboratorioindex) public view returns(uint) {
-        return puestos[_laboratorioindex].length;
-    }
     
     
      /**
@@ -293,18 +289,6 @@ contract ReslabEtsit {
     
     
 
-
-
-
-
-
-    //puestos que hay en un lab. Coger el array que te da el mapping de puestos y devolver su .length
-
-    function puestosdeLaboratorio(uint _laboratorioindex) public view returns(uint) {
-
-        return puestos[_laboratorioindex].length;
-    }
-    
 
 
 
