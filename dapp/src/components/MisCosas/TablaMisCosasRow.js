@@ -4,7 +4,7 @@ import {drizzleReactHooks} from '@drizzle/react-plugin';
 const {useDrizzle,useDrizzleState} = drizzleReactHooks;
 
 const TablaMisCosasRow =  ({indexlab,puestoIndice, fecha,NAsignatura}) =>  {
-    const {useCacheCall,useCacheSend} = useDrizzle();
+    const {useCacheCall} = useDrizzle();
 
     const drizzleState = useDrizzleState(state=>state);
     let miaddress = drizzleState.accounts[0];
@@ -12,8 +12,7 @@ const TablaMisCosasRow =  ({indexlab,puestoIndice, fecha,NAsignatura}) =>  {
     
   
     let puestoName = useCacheCall("ReslabEtsit", "puestosRegistrados", puestoIndice)?.nombre;
-    const reservaTurno = useCacheSend("ReslabEtsit", "datosTurno",miaddress)?.nombre ; 
-    const datos = useCacheCall("ReslabEtsit", "quienSoy");
+   
 
     //RECORRER TODOS LOS ADREES ?? Y PEDIRINFO FUNCION ADREES REGISTRADO
    
@@ -32,8 +31,8 @@ const TablaMisCosasRow =  ({indexlab,puestoIndice, fecha,NAsignatura}) =>  {
                <td key={"p2-" + puestoIndice + "-" + el}>
 
 
-                        {typeof reserva === "undefined" ?   <img className="reloj" src="/reloj.png"/> :  
-                        reserva === "0x0000000000000000000000000000000000000000" ? <img className="reservaLibre" src="/reservaLibre.png"/> : +reserva === +miaddress ? "MI RESERVA" : <img className="noReserva" src="/noReserva.png"/> }
+                        {typeof reserva === "undefined" ?   <img className="reloj" src="/reloj.png" alt='reloj'/> :  
+                        reserva === "0x0000000000000000000000000000000000000000" ? <img className="reservaLibre" src="/reservaLibre.png" alt='reserva'/> : +reserva === +miaddress ? "MI RESERVA" : <img className="noReserva" src="/noReserva.png" alt='no rserva'/> }
                        
                       
                         

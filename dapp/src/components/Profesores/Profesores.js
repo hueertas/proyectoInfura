@@ -30,7 +30,7 @@ export const Profesores = () => {
 
       
 
-         <div className="tablaAsignaturasdiv">
+         <div className="tablausuariosdiv">
             <table className='tablaAsignaturas'>
                 <ProfesoresHead/>
                 <ProfesoresBody profesRegistradosLength={ml || 0}/>
@@ -39,7 +39,7 @@ export const Profesores = () => {
          </div> 
             
 
-         <img className="covid" src="/covid free.png"/>
+         <img className="covid" src="/covid free.png" alt='covid'/>
          
         </div>
     );
@@ -56,7 +56,7 @@ export const Profesor = () => {
     return <>
 
      <div className='AppAsignaturadiv'>
-        <img className="fondoAzulAP" src="/fondoAzul.png"/>
+        <img className="fondoAzulAP" src="/fondoAzul.png" alt='fondo'/>
         <div className='SeccionInfo'>
         <header className="AppAlumno">
             <h2>INFORMACIÓN PROFESOR</h2>
@@ -77,7 +77,7 @@ export const Profesor = () => {
             <b>{addr}</b>
         </ul>
         </div>
-        <Link className='volverasig' to="/profesores"><img className="volver" src="/volver.png"/></Link>
+        <Link className='volverasig' to="/profesores"><img className="volver" src="/volver.png" alt='volver'/></Link>
      </div>
     </>
     

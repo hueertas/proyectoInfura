@@ -39,16 +39,16 @@ const BotonReservar = ({puestoIndice,fecha,turnoIndex,NAsignatura}) => {
     }));
     const [lastStackID, setLastStackID] = useState(undefined)
     const txObject = transactions[transactionStack[lastStackID] || 'undefined'];
-    const status = txObject ?  txObject.status : "Desconocido";
     
-     // Conservar los valores metidos en el formulario!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    
+     
      
     const puestoxIndice= Number(puestoIndice);
     const fechax= Number(fecha);
     const turnoxIndex= Number(turnoIndex);
     
   
-     //var intPuestoIndice = parseInt(puestoIndice, 10);
+    
      
 
     return (<article className="AppMisDatos">
@@ -72,7 +72,7 @@ const BotonReservar = ({puestoIndice,fecha,turnoIndex,NAsignatura}) => {
                             
                         }}>
                    
-                  <img className="reservaLibre" src="/reservaLibre.png"/>
+                  <img className="reservaLibre" src="/reservaLibre.png" alt='reserva'/>
                 </button>
 
                 {/*<p> Último estado = {status} </p>*/}

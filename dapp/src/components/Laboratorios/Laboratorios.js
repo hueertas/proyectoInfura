@@ -2,13 +2,12 @@ import {drizzleReactHooks} from '@drizzle/react-plugin'
 import {useParams, Link} from "react-router-dom";
 import LaboratoriosHead from "./LaboratoriosHead";
 import LaboratoriosBody from "./LaboratoriosBody";
-import BuscaPuesto from "./BuscaPuesto";
+
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import React, {useState} from 'react';
 import moment from 'moment';
 import ReservarPuestos from '../ReservarPuestos/ReservarPuestos';
-
 
 
 const {useDrizzle} = drizzleReactHooks;
@@ -30,7 +29,7 @@ export const Laboratorios = () => {
                 </table>
                </div>
 
-               <img className="covid" src="/covid free.png"/>
+               <img className="covid" src="/covid free.png" alt='covid'/>
            </section>
        );
    };
@@ -65,13 +64,13 @@ export const Laboratorios = () => {
        //rows.push(<tr><td>{i}</td></tr>);
 
     }*/
-    const el = useCacheCall("ReslabEtsit", "turnosLength") || 0;
+   
     
     return <>
 
         
         <div className='AppAsignaturadiv'>
-        <img className="fondoAzulLab" src="/fondoAzul.png"/>
+        <img className="fondoAzulLab" src="/fondoAzul.png" alt='fondo'/>
             <header className="AppAlumno">
                 <h2>LABORATORIO: {index}
                 </h2>
@@ -90,9 +89,11 @@ export const Laboratorios = () => {
            
             <h1 className='Selectcalendar1'> Seleccione el día para reservar su turno:</h1>
 
+         
             <Calendar className='Selectcalendar'
             value={dateState}
             onChange={changeDate}/>
+         
 
             <div className='diaselec'>
 
@@ -101,9 +102,9 @@ export const Laboratorios = () => {
             </div>
 
             
-            <img className="leyenda" src="/leyenda.png"/>
+            <img className="leyenda" src="/leyenda.png" alt='leyenda'/>
 
-            <Link className='volverLab' to="/laboratorios"><img className="volver" src="/volver.png"/></Link>
+            <Link className='volverLab' to="/laboratorios"><img className="volver" src="/volver.png" alt='volver'/></Link>
 
         </div>
         <div className='AppReservaPuestos'> 
@@ -131,4 +132,3 @@ export const Laboratorios = () => {
     };
 
 
- 

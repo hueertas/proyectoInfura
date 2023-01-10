@@ -53,7 +53,7 @@ export const MiReserva = () => {
 
         <div className='AppMisCosasdiv'>
 
-        <img className="fondoAzulMisCosas" src="/fondoAzul.png"/>
+        <img className="fondoAzulMisCosas" src="/fondoAzul.png" alt='fondo'/>
 
             <h1 className='Selectcalendar'>Seleccione el día para reservar turno:</h1>
 
@@ -66,9 +66,9 @@ export const MiReserva = () => {
             <p>El día seleccionado es: <b>{moment(dateState).format('MMMM Do YYYY')}</b></p>
            {/* <p>El día seleccionado en formato uint es : <b>{myEpoch}</b></p>*/}
             </div>
-            <img className="leyenda1" src="/leyenda.png"/>
+            <img className="leyenda1" src="/leyenda.png" alt='leyenda'/>
 
-            <Link className='volverLab1' to="/miscosas"><img className="volver" src="/volver.png"/></Link>
+            <Link className='volverLab1' to="/miscosas"><img className="volver" src="/volver.png" alt='volver'/></Link>
 
             
 

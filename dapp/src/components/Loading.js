@@ -16,7 +16,7 @@ const Loading = ({children}) => {
     }
 
     // Comprobar que MetaMask está conectado a la red que quiero:
-    /*if (window.ethereum.chainId && window.ethereum.chainId !== "0x539") {
+   /* if (window.ethereum.chainId && window.ethereum.chainId !== "0x539") {
         return (<main><h1>⚠️ Use Ganache {window.ethereum.chainId}</h1></main>);
     }
 */

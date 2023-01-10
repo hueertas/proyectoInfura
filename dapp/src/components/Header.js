@@ -5,7 +5,7 @@ const Header = () => (
             <div className="Titulo"> UPM - Aplicación de gestión reservas</div> 
         
 
-            <img className="logo" src="/etsitlogo.png"/>
+            <img className="logo" src="/etsitlogo.png" alt='logo'/>
             
             </h1>
     </header>

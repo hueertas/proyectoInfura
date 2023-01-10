@@ -1,18 +1,18 @@
 import {drizzleReactHooks} from '@drizzle/react-plugin';
 
 
-const {useDrizzle,useDrizzleState} = drizzleReactHooks;
+const {useDrizzle} = drizzleReactHooks;
 
 const TablaReservasLabRow =  ({indexlab,puestoIndice, fecha,NAsignatura}) =>  {
-    const {useCacheCall,useCacheSend} = useDrizzle();
+    const {useCacheCall} = useDrizzle();
 
-    const drizzleState = useDrizzleState(state=>state);
-    let miaddress = drizzleState.accounts[0];
+    
+    
 
     //Hacer un adress
   
     let puestoName = useCacheCall("ReslabEtsit", "puestosRegistrados", puestoIndice)?.nombre;
-    const reservaTurno = useCacheSend("ReslabEtsit", "datosTurno",miaddress)?.nombre ; 
+    
     
 
     
@@ -32,8 +32,7 @@ const TablaReservasLabRow =  ({indexlab,puestoIndice, fecha,NAsignatura}) =>  {
         //const reservax = call("ReslabEtsit","datosReservaPorLabPuestoTurno",puestoIndice,fecha,i)?.dirAlumno;
        // const xx = address(reserva);
         const datosPersona = call("ReslabEtsit","datosAlumno",+reserva);
-       // const datos = call("ReslabEtsit", "quienEs",+reserva);
-       const datos = call("ReslabEtsit", "datosAlumnoNumber", +reserva);
+     
 
     
         
@@ -46,8 +45,8 @@ const TablaReservasLabRow =  ({indexlab,puestoIndice, fecha,NAsignatura}) =>  {
                <td key={"p2-" + puestoIndice + "-" + el}>
 
                      
-                        {typeof reserva === "undefined" ?   <img className="reloj" src="/reloj.png"/> :  
-                        reserva === "0x0000000000000000000000000000000000000000" ? <img className="reservaLibre" src="/reservaLibre.png"/> :  "OCUPADO POR " + reserva }
+                        {typeof reserva === "undefined" ?   <img className="reloj" src="/reloj.png" alt='reloj' /> :  
+                        reserva === "0x0000000000000000000000000000000000000000" ? <img className="reservaLibre" src="/reservaLibre.png" alt='reservarlibre'/> :  "OCUPADO POR " + reserva }
                     
                       
 

@@ -15,7 +15,7 @@ const LaboratorioReservaRow = ({laboratorioIndex}) => {
                 <td>{datos?.nombreL}</td>
                 <td>{datos?.asignaura}</td>
                 {/*<td>{datos?.info}</td>*/}
-                <td><Link to={`/reservasLaboratorios/${laboratorioIndex}`}><img className="clicar" src="/clicar.png"/></Link></td>
+                <td><Link to={`/reservasLaboratorios/${laboratorioIndex}`}><img className="clicar" src="/clicar.png" alt='click'/></Link></td>
                
                 
        

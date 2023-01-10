@@ -1,11 +1,9 @@
 import ReservarPuestosHead from "./ReservarPuestosHead";
 import ReservarPuestosBody from "./ReservarPuestosBody";
-import {useParams, Link} from "react-router-dom";
-import BotonReservar from "./BotonReservar";
-import Calendar from 'react-calendar'
+
 import 'react-calendar/dist/Calendar.css';
-import moment from 'moment';
-import React, {useState} from 'react';
+
+import React, {} from 'react';
 
 
 

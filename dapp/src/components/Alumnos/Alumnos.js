@@ -22,7 +22,7 @@
 
         
 
-           <div className="AppLaboratorios">
+           <section className='AppAsignaturas'>
 
                 
              
@@ -33,18 +33,18 @@
 
          
 
-            <div className="tablaAsignaturasdiv">
+            <div className='tablausuariosdiv'>
                <table className='tablaAsignaturas'>
-                   <AlumnosHead/>
+                   <AlumnosHead className = "cabezeraAsignaturas"/>
                    <AlumnosBody matriculasLength={ml || 0}/>
                    
                </table>
             </div> 
                
 
-            <img className="covid" src="/covid free.png"/>
-            
-           </div>
+            <img className="covid" src="/covid free.png" alt='covid'/>
+          
+           </section>
        );
    };
    
@@ -60,7 +60,7 @@
 
         <div className='AppAsignaturadiv'>
 
-            <img className="fondoAzulAP" src="/fondoAzul.png"/>
+            <img className="fondoAzulAP" src="/fondoAzul.png" alt='fondo'/>
 
             <div className='SeccionInfo'>
            <header className="AppAlumno">
@@ -78,7 +78,7 @@
                <p>{addr}</p>
            </ul>
            </div>
-           <Link className='volverasig' to="/alumnos"><img className="volver" src="/volver.png"/></Link>
+           <Link className='volverasig' to="/alumnos"><img className="volver" src="/volver.png" alt='volver'/></Link>
         </div>
        </>
        

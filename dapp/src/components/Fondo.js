@@ -3,7 +3,7 @@ const Fondo = () => (
              
         
 
-            <img className="Fondo" src="/rosaMar.jpg"/>
+            <img className="Fondo" src="/rosaMar.jpg" alt='fondo2'/>
             
        
    );

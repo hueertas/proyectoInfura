@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import SoyAlguno from './roles/SoyAlguno';
-import SoyProfesor from './roles/SoyProfesor';
+
 
 const Navegacion = () => (
 
@@ -8,7 +8,7 @@ const Navegacion = () => (
     <nav>
          <ul>
           
-            <li><Link to="/"><img className="Home" src="/home.jpg"/></Link></li>
+            <li><Link to="/"><img className="Home" src="/home.jpg" alt='home'/></Link></li>
             <SoyAlguno owner profesor>
             <li><Link to="/alumnos/">Alumnos</Link></li>
             </SoyAlguno>

@@ -1,24 +1,22 @@
 import {drizzleReactHooks} from '@drizzle/react-plugin';
-import moment from 'moment';
-import BotonReservar from './BotonReservar';
-import ReservarUnPuesto from "./ReservarUnPuesto";
-import BotonQuitarReserva from "./BotonQuitarReserva";
-import {useParams, Link} from "react-router-dom";
 
-import ReservarPuestos from './ReservarPuestos';
+import BotonReservar from './BotonReservar';
+
+import BotonQuitarReserva from "./BotonQuitarReserva";
+
 
 const {useDrizzle,useDrizzleState} = drizzleReactHooks;
 
 const ReservarPuestoRow =  ({indexlab,puestoIndice, fecha,NAsignatura}) =>  {
-    const {useCacheCall,useCacheSend} = useDrizzle();
+    const {useCacheCall} = useDrizzle();
 
     const drizzleState = useDrizzleState(state=>state);
     let miaddress = drizzleState.accounts[0];
 
-    const datos = useCacheCall("ReslabEtsit", "laboratoriosRegistrados", indexlab);
+ 
   
     let puestoName = useCacheCall("ReslabEtsit", "puestosRegistrados", puestoIndice)?.nombre;
-    const reservaTurno = useCacheSend("ReslabEtsit", "datosTurno",miaddress)?.nombre ; 
+
 
     
 
@@ -44,7 +42,7 @@ const ReservarPuestoRow =  ({indexlab,puestoIndice, fecha,NAsignatura}) =>  {
                   
                         
                     
-                        {typeof reserva === "undefined" ?   <img className="reloj" src="/reloj.png"/> 
+                        {typeof reserva === "undefined" ?   <img className="reloj" src="/reloj.png" alt='reloj'/> 
                             :     reserva === miaddress ? <BotonQuitarReserva  puestoIndice={puestoIndice} fecha={fecha} turnoIndex={i} NAsignatura={NAsignatura}/> 
                             :     reserva === "0x0000000000000000000000000000000000000000" ?  <BotonReservar  puestoIndice={puestoIndice} fecha={fecha} turnoIndex={i} NAsignatura={NAsignatura}/>
                             :    <BotonQuitarReserva  puestoIndice={puestoIndice} fecha={fecha} turnoIndex={i} NAsignatura={NAsignatura}/> 

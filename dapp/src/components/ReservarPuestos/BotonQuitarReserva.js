@@ -38,7 +38,7 @@ const BotonQuitarReservar = ({puestoIndice,fecha,turnoIndex,NAsignatura}) => {
     }));
     const [lastStackID, setLastStackID] = useState(undefined)
     const txObject = transactions[transactionStack[lastStackID] || 'undefined'];
-    const status = txObject?.status;
+    
 
     const puestoxIndice= Number(puestoIndice);
     const fechax= Number(fecha);
@@ -61,7 +61,7 @@ const BotonQuitarReservar = ({puestoIndice,fecha,turnoIndex,NAsignatura}) => {
                             
                         }}>
                    
-                   <img className="noReserva" src="/noReserva.png"/>
+                   <img className="noReserva" src="/noReserva.png" alt='no reserva'/>
                 </button>
 
                 {/*<p> Último estado = {status} </p>*/}

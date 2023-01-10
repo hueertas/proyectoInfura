@@ -1,15 +1,15 @@
-import {drizzleReactHooks} from '@drizzle/react-plugin'
 
-const {useDrizzle} = drizzleReactHooks;
+
+
 
 const ReservarPuestosHead = () => {
-    const {useCacheCall} = useDrizzle();
+
 
 
     
 
     let thead = [];
-    {/*thead.push(<th key={"chae"}>P/T</th>);*/}
+    
     thead.push(<th key={"chn"}>Nombre Puestos</th>);
     thead.push(<th key={"chn"}>10:00-11:00</th>);
     thead.push(<th key={"chn"}>11:00-12:00</th>);

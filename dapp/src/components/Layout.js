@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import Header from "./Header";
 import Navegacion from "./Navegacion";
-import Fondo from "./Fondo";
+
 
 function Layout() {
     return (
@@ -11,7 +11,7 @@ function Layout() {
             
             <Header />
             <Navegacion />
-            <img className="imgfondo" src="/fondodApp.jpg"/>
+            <img className="imgfondo" src="/fondodApp.jpg" alt='fonditoazul'/>
             <Outlet />
             {/*<Fondo/>*/}
          

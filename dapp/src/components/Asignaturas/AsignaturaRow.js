@@ -1,7 +1,7 @@
 
 
 import {drizzleReactHooks} from '@drizzle/react-plugin'
-import {useParams, Link} from "react-router-dom";
+import { Link} from "react-router-dom";
 
 
 
@@ -23,7 +23,7 @@ const AsignaturaRow = ({asignaturaIndex}) => {
                 {/*<th>Asignatura<sub>{asignaturaIndex}</sub></th>*/}
                 <td>{datos?.nombre}</td>
                 <td>{datos?.indexLab}</td>
-                <td><Link to={`/asignaturas/${asignaturaIndex}`}><img className="clicar" src="/clicar.png"/></Link></td>
+                <td><Link to={`/asignaturas/${asignaturaIndex}`}><img className="clicar" src="/clicar.png" alt='click3'/></Link></td>
                 
 
         

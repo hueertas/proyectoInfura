@@ -26,7 +26,8 @@ export const Asignaturas = () => {
                 </table>
                </div>
 
-               <img className="covid" src="/covid free.png"/>
+               <img className="covid" src="/covid free.png" alt='covid'/>
+               
 
                
            </section>
@@ -40,8 +41,7 @@ const {useCacheCall} = useDrizzle();
 let {index} = useParams();
 
 const datos = useCacheCall("ReslabEtsit", "asignaturasRegistradas", index);
-const el = useCacheCall("ReslabEtsit", "turnosLength") || 0; //demostrar que en asignatura si lo coge porque ?????????????
-const LabAsig = useCacheCall("ReslabEtsit", "indiceLabPorAsignatura",index) || 0;
+
 
 
 return <>
@@ -49,7 +49,7 @@ return <>
 
 
     <div className='AppAsignaturadiv'>
-        <img className="fondoAzulAsig" src="/fondoAzul.png"/>
+        <img className="fondoAzulAsig" src="/fondoAzul.png" alt='fondo'/>
         <div className='SeccionInfoAsig'>
        <header className="AppAlumno">
             <h2>INFORMACIÓN DE LA ASIGNATURA</h2>
@@ -65,13 +65,13 @@ return <>
 
            
 
-             <Link className='linkasig' to={`/laboratorios/${datos?.indexLab}`}><img className="AccederLab"src="/AccederLab.png"/></Link>
+             <Link className='linkasig' to={`/laboratorios/${datos?.indexLab}`}><img className="AccederLab"src="/AccederLab.png" alt='accederlab'/></Link>
             
 
         </ul>
         </div> 
 
-        <Link  className='volverasig' to="/asignaturas"><img className="volver" src="/volver.png"/></Link>
+        <Link  className='volverasig' to="/asignaturas"><img className="volver" src="/volver.png" alt='volver'/></Link>
 
 
     </div>

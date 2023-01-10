@@ -1,15 +1,15 @@
-import {drizzleReactHooks} from '@drizzle/react-plugin'
 
-const {useDrizzle} = drizzleReactHooks;
+
+
 
 const TablaMisCosasHead = () => {
-    const {useCacheCall} = useDrizzle();
+    
 
 
     
 
     let thead = [];
-    {/*thead.push(<th key={"chae"}>P/T</th>);*/}
+   
     thead.push(<th key={"chn"}>Nombre Puestos</th>);
     thead.push(<th key={"chn"}>10:00-11:00</th>);
     thead.push(<th key={"chn"}>11:00-12:00</th>);
@@ -22,13 +22,7 @@ const TablaMisCosasHead = () => {
     
     
 
-    /*const el = useCacheCall("ReslabEtsit", "turnosLength") || 0;
-    //thead.push(<th key={"xxx"}>{el}{el}</th>);
-    for (let i = 0; i < el; i++) {
-        thead.push(<th key={"chev-" + i}>Turno<sub>{i}</sub></th>);
-        //thead.push(<th key={"chn"}>Nombre Puestos</th>);
-    }
-*/
+
     return <thead><tr>{thead}</tr></thead>;
 };
 

@@ -1,9 +1,8 @@
 
-import Calendar from 'react-calendar'
+
 import 'react-calendar/dist/Calendar.css';
-import React, {useState} from 'react';
-import moment from 'moment';
-import Navegacion from "./Navegacion";
+import React, {} from 'react';
+
 
 
 
@@ -18,8 +17,8 @@ const Home = () => (
         
            
             <div class="contenedor">
-            <img className= "bombilla"src="titulobombilla.png" />
-            <img class="top" src="tituloorde.png" />
+            <img className= "bombilla"src="titulobombilla.png" alt='bombi'/>
+            <img class="top" src="tituloorde.png" alt='top' />
             </div>
 
           
@@ -45,7 +44,7 @@ const Home = () => (
            {/* <Calendar className= "calendar"></Calendar>*/}
 
             
-            {/*<img className="señalar" src="/señalar.png"/>*/}
+         
 
 
          

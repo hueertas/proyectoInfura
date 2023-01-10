@@ -2,14 +2,14 @@
 import {drizzleReactHooks} from '@drizzle/react-plugin'
 import {useParams, Link} from "react-router-dom";
 import LaboratoriosHead from "../Laboratorios/LaboratoriosHead";
-import LaboratoriosBody from "../Laboratorios/LaboratoriosBody";
+
 import LaboratoriosReservaBody from "./LaboratoriosReservaBody";
 
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import React, {useState} from 'react';
 import moment from 'moment';
-import ReservarPuestos from '../ReservarPuestos/ReservarPuestos';
+
 import TablaReservasLab from "./TablaReservasLab";
 
 
@@ -41,7 +41,7 @@ export  const ReservasLabs = () => {
                  </table>
                 </div>
  
-                <img className="covid" src="/covid free.png"/>
+                <img className="covid" src="/covid free.png" alt='covid'/>
             </section>
         );
     };
@@ -69,19 +69,13 @@ export  const ReservasLabs = () => {
         var myDate =  new Date(dateState); ; // Your timezone!
         var myEpoch = myDate.getTime()/1000.0;
     
-        /*let rows = [];
-        for (let i = 0; i < datospuesto; i++) {
-            rows.push(<Laboratorio key={"ab-"+i} laboratorioIndex={i}/>);
-           //rows.push(<tr><td>{i}</td></tr>);
     
-        }*/
-        const el = useCacheCall("ReslabEtsit", "turnosLength") || 0;
         
         return <>
     
     
             <div className='AppAsignaturadiv'>
-            <img className="fondoAzulLab" src="/fondoAzul.png"/>
+            <img className="fondoAzulLab" src="/fondoAzul.png" alt='fondo'/>
                 <header className="AppAlumno">
                     <h2>LABOARTORIO:
                     </h2>
@@ -111,9 +105,9 @@ export  const ReservasLabs = () => {
                 </div>
     
                 
-                <img className="leyenda" src="/leyenda.png"/>
+                <img className="leyenda" src="/leyenda.png" alt='leyend'/>
     
-                <Link className='volverLab' to="/reservasLaboratorios"><img className="volver" src="/volver.png"/></Link>
+                <Link className='volverLab' to="/reservasLaboratorios"><img className="volver" src="/volver.png" alt='volver'/></Link>
     
             </div>
             <div className='AppReservaPuestos'> 
