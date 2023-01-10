@@ -35,7 +35,7 @@ Paula Huertas Sánchez - Cabezudo
 ## Manual de instalación 
 
 1. Clonar el repositorio:
-- ```git clone https://github.com/hueertas/TrabajoFinalReservas.git```
+- ```git clone https://github.com/hueertas/proyectoInfura.git```
 2. Acceder a la carpeta e instalar las dependencias:
 - `npm install`
 - `cd dapp`
