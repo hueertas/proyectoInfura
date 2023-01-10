@@ -53,4 +53,5 @@ de recuperación de cuenta que ofrece metamask. InfuraProjectID se obtiene de la
 6. Ir a la carpeta dapp e iniciar la dApp:
 - `cd dapp`
 - `npm start`
-7. Abrir la extensión de MetaMask en el navegador y conectarse a la red de prueba Goerli.
+7.Meter la frase de recuperación de metamask en la constante mnemonic y el API KEY de infura  en el fichero truffle-config.js 
+8. Abrir la extensión de MetaMask en el navegador y conectarse a la red de prueba Goerli.
